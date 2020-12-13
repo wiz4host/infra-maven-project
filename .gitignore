@@ -1,5 +1,18 @@
+#Directory
+target/
+.idea/*
+
+#Shell script
+nexus-download.sh
+
+#maven ignore
+infra-app.iml
+
 # Local .terraform directories
 **/.terraform/*
+
+#terraform secrets
+terraform/variables.secret.tf
 
 # .tfstate files
 *.tfstate
