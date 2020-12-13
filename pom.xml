@@ -23,7 +23,7 @@
               <artifactId>maven-jar-plugin</artifactId>
               <version>2.4</version>
               <configuration>
-                <finalName>InfraTerrafromScripts</finalName>
+                <finalName>InfraTerraformScripts</finalName>
               </configuration>
               <executions>
                 <execution>
@@ -55,7 +55,7 @@
                 <version>2.5.2</version>
                 <configuration>
                     <appendAssemblyId>false</appendAssemblyId>
-                    <finalName>InfraTerrafromScripts</finalName>
+                    <finalName>InfraTerraformScripts</finalName>
                     <descriptors>
                         <descriptor>${basedir}/assembly.xml</descriptor>
                     </descriptors>
@@ -127,7 +127,7 @@
               <type>zip</type>
               <overWrite>false</overWrite>
               <outputDirectory>${project.build.directory}/download-artifact</outputDirectory>
-              <destFileName>infra-app.zip</destFileName>
+              <destFileName>InfraTerraformScripts.zip</destFileName>
             </artifactItem>
           </artifactItems>
           <outputDirectory>${project.build.directory}/download-artifact</outputDirectory>
@@ -136,13 +136,18 @@
         </configuration>
       </plugin>
 
-
-
-
-
-
         </plugins>
     </build>
+
+
+
+    <repositories>
+        <repository>
+            <id>maven-snapshot</id>
+            <name>maven-snapshot</name>
+            <url>${nexusbaseurl}/repository/maven-snapshots</url>
+        </repository>
+    </repositories>
 
 
 
