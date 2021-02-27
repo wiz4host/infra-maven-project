@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     parameters {
-        choice(name: 'VERSION_NUM', choices: ['ver-1.2.3', 'ver-1.2.3', 'ver-1.2.3'], description: 'get version number from git tag')
+        choice(name: 'VERSION_NUM', choices: ['ver-1.2.3', 'ver-2.0.0', 'ver-2.0.2'], description: 'get version number from git tag')
     }
     
     
