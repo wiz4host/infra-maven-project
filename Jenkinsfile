@@ -21,8 +21,8 @@ pipeline {
                         case "development":
 			    result = "branch is set:" + "development"
 			    build ( 
-    				    job: 'TFE/individual/development', 
-				    wait = true,
+    				    job: 'TFE/individual/development',  
+				    wait: true,
     				    parameters: [
     					    string(name: 'BRANCH_NAME', value: env.BRANCH_NAME),
     					    string(name: 'VERSION_NUM', value: params.VERSION_NUM)
@@ -32,7 +32,8 @@ pipeline {
                         case ~/^feature-[0-9].[0-9].[0-9]+$/:
 			    result = "branch is set:" + env.BRANCH_NAME
 			    build ( 
-    				    job: 'TFE/individual/feature', 
+    				    job: 'TFE/individual/feature',  
+				    wait: true,
     				    parameters: [
     					    string(name: 'BRANCH_NAME', value: env.BRANCH_NAME),
     					    string(name: 'VERSION_NUM', value: params.VERSION_NUM)
