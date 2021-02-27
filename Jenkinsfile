@@ -22,6 +22,7 @@ pipeline {
 			    result = "branch is set:" + "development"
 			    build ( 
     				    job: 'TFE/individual/development', 
+				    wait = true,
     				    parameters: [
     					    string(name: 'BRANCH_NAME', value: env.BRANCH_NAME),
     					    string(name: 'VERSION_NUM', value: params.VERSION_NUM)
